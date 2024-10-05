@@ -1,0 +1,3 @@
+function [dcm1] = dcm1axis(angle1)
+
+end

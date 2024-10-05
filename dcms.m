@@ -1,11 +1,15 @@
-function [dcm] = dcm1axis(angle)
+function [dcm1] = dcm1axis(angle1)
 
 end
 
-function [dcm] = dcm2axis(angle)
-
+function [dcm2] = dcm2axis(angle2)
+dcm2 = [cos(angle2),0,-1*sin(angle2)
+    0,1,0
+    sin(angle2),0,cos(angle2)]
 end
 
-function [dcm] = dcm3axis(angle)
-
+function [dcm3] = dcm3axis(angle3)
+dcm3 = [cos(angle3),sin(angle3),0
+    -1*sin(angle3), cos(angle3), 0
+    0 , 0 1]
 end
