@@ -10,9 +10,9 @@ rB = [6064;2942;1974]; %km, B frame
 vB = [.4;4.6;-3.2]; %km/s, B frame
 
 dcmNC = dcm3(alpha); %generating DCMs
-dcmCB = dcm1(lambda); 
+dcmCB = dcm2(-lambda); 
 dcmNB = dcmCB * dcmNC; %multiplying DCMs together 
-dcmBN = transpose(dcmNB); %transposing DCM
+dcmBN = dcmNB'; %transposing DCM
 rN = dcmBN * rB; %transforming the vectors
 vN = dcmBN * vB;
 
